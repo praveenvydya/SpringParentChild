@@ -26,11 +26,12 @@ public class VydyaListener implements ServletContextListener {
 		 * event.getServletContext()).getBean(TestChild.class);
 		 */
     	//SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
-    	 AutowireCapableBeanFactory autowireCapableBeanFactory = WebApplicationContextUtils.
+    	 System.out.println("The application started0");
+    	AutowireCapableBeanFactory autowireCapableBeanFactory = WebApplicationContextUtils.
     			 getRequiredWebApplicationContext(event.getServletContext()).getAutowireCapableBeanFactory();
          autowireCapableBeanFactory.autowireBean(this);
 
-        System.out.println("The application started");
+        System.out.println("The application started1");
         
        
     }
